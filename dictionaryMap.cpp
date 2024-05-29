@@ -5,9 +5,18 @@
 using namespace std;
 
 int main(){
-    map<int, string> myDictionary = {{ 1, "Mercury" }, { 2, "Venus" }, { 3, "Earth" }};
+    map<int, string> students;
 
-    cout << myDictionary[1] << endl;
+    students[905] = "Budi";
+    students[802] = "Tono";
+    students[603] = "Rini";
+
+    map<int, string>::iterator i;
+    for (i = students.begin(); i != students.end(); ++i){
+        cout << i->first << " : " << i->second << endl;
+    }
+
+    cout << students[603] << endl;
 
     return 0;
 }
